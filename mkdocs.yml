@@ -1,13 +1,19 @@
 site_name: Docker4PHP Documentation
-
+site_url: https://github.com/wodby/docker4php
 repo_url: https://github.com/wodby/docker4php
-site_description: 'Docker4PHP – Docker-based PHP environment for local development'
+site_description: 'Docker4PHP – Docker-based PHP stack'
+site_author: Wodby Inc
+copyright: Wodby Inc
 theme: readthedocs
-
+site_dir: build/docs
+theme_dir: docs/theme
 markdown_extensions:
-  - toc:
-      permalink: True
-
+  - markdown_include.include
+  - admonition
+  - def_list
+  - footnotes
+extra_css: []
+extra_javascript: []
 pages:
   - Getting Started: 'index.md'
   - Domains: 'domains.md'

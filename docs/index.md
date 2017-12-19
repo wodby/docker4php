@@ -2,8 +2,6 @@
 
 Docker4PHP is a set of docker containers optimized for PHP. Use docker-compose.yml file from [docker4php repository](https://github.com/wodby/docker4php) to spin up local environment on Linux, Mac OS X and Windows. 
 
-Docker4PHP is designed to be used for local development, if you're looking for a production solution see [using in production](production.md).
-
 ## Overview
 
 The PHP stack consist of the following containers:
@@ -68,16 +66,13 @@ The PHP stack consist of the following containers:
 * Install Docker ([Linux](https://docs.docker.com/engine/installation), [Docker for Mac](https://docs.docker.com/engine/installation/mac) or [Docker for Windows (10+ Pro)](https://docs.docker.com/engine/installation/windows))
 * For Linux additionally install [docker compose](https://docs.docker.com/compose/install)
 
-## Must know before you start
-
-1. **(!!!) You will lose MariaDB data** if you run `docker-compose down`. Instead use `docker-compose stop` to stop containers. Alternatively, you can use a manual volume for mariadb data (see compose file), this way your data will always persist 
-2. To avoid potential problems with permissions between your host and containers please follow [these instructions](permissions.md)
-3. _For macOS users_: Out of box Docker for Mac volumes has poor performance. However there are workarounds, read more [here](macos.md)
-4. For better reliability we release images with stability tags (e.g. `wodby/php:7.1-X.X.X`) which correspond to git tags. We **strongly recommend** using images only with stability tags. 
+!!! warning "Must know before you start":
+    1. **(!!!) You will lose MariaDB data** if you run `docker-compose down`. Instead use `docker-compose stop` to stop containers. Alternatively, you can use a manual volume for mariadb data (see compose file), this way your data will always persist 
+    2. To avoid potential problems with permissions between your host and containers please follow [these instructions](permissions.md)
+    3. _For macOS users_: Out of box Docker for Mac volumes has poor performance. However there are workarounds, read more [here](macos.md)
 
 ## Usage 
 
-0. Read [must know before you start](#must-know-before-you-start) 
 1. Download `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4php/releases) to your PHP project root
 2. Make sure`NGINX_SERVER_ROOT` (or `APACHE_SERVER_ROOT`) is set to your project public directory with `index.php` (by default `/var/www/html/public`)  
 3. Optional: import existing database for [MariaDB](containers/mariadb.md#import-existing-database), for [PostgreSQL](containers/postgres.md#import-existing-database)
@@ -91,6 +86,10 @@ You can stop containers by executing:
 ```bash
 docker-compose stop
 ```
+
+!!! tip "NOTE": 
+    For better reliability we release images with stability tags (e.g. `wodby/php:7.1-X.X.X`) which correspond to git tags. We **strongly recommend** using images only with stability tags. 
+
 
 Feel free to adjust volumes and ports in the compose file for your convenience. Also, read [how to access containers](access.md) and [how to get logs](logs.md)
 

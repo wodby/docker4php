@@ -59,7 +59,7 @@ The PHP stack consist of the following containers:
 
 ## Documentation
 
-Full documentation is available at https://docker4php.readthedocs.io.
+TBD
 
 ## License
 
