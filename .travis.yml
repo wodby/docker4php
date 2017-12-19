@@ -1,0 +1,31 @@
+language: bash
+
+services:
+  - docker
+
+env:
+  matrix:
+    - PHP_VER=7.2
+    - PHP_VER=7.1
+    - PHP_VER=7.0
+
+script:
+  - make test
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_ACCESS_TOKEN
+  overwrite: true
+  skip_cleanup: true
+  file_glob: true
+  file:
+    - docker-compose.yml
+    - docker-sync.yml
+    - traefik.yml
+  on:
+    tags: true
+
+notifications:
+  slack:
+    on_failure: never
+    secure:

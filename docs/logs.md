@@ -1,0 +1,17 @@
+# Containers Logs
+
+## GUI
+
+You can find containers logs from portainer UI: [http://portainer.php.docker.localhost:8000](http://portainer.php.docker.localhost:8000)
+
+## CLI
+
+To get logs from a container simply run (skip the last param to get logs from all the containers):
+```
+$ docker-compose logs [service]
+```
+
+Example: real-time logs of the PHP container:
+```
+$ docker-compose logs -f php
+```
