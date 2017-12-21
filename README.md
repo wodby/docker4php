@@ -59,7 +59,7 @@ The PHP stack consist of the following containers:
 
 ## Documentation
 
-Full documentation is available at https://wodby.com/stacks/php/docs
+Full documentation is available at https://wodby.com/stacks/php/docs/1.0/local
 
 ## License
 
