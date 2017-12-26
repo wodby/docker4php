@@ -1,6 +1,5 @@
 # Docker-based PHP stack
 
-[![Documentation Status](https://readthedocs.org/projects/docker4php/badge?version=latest)](http://docs.docker4php.org)
 [![Build Status](https://travis-ci.org/wodby/docker4php.svg?branch=master)](https://travis-ci.org/wodby/docker4php)
 [![Wodby Slack](http://slack.wodby.com/badge.svg)](http://slack.wodby.com)
 [![Wodby Twitter](https://img.shields.io/twitter/follow/wodbyhq.svg?style=social&label=Follow)](https://twitter.com/wodbyhq)
