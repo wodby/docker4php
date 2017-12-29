@@ -149,6 +149,32 @@ services:
 #      - 'traefik.port=8983'
 #      - 'traefik.frontend.rule=Host:solr.php.docker.localhost'
 
+#  elasticsearch:
+#    image: wodby/elasticsearch:6.1-2.0.0
+##    image: wodby/elasticsearch:6.0-2.0.0
+##    image: wodby/elasticsearch:5.6-2.0.0
+##    image: wodby/elasticsearch:5.5-2.0.0
+##    image: wodby/elasticsearch:5.4-2.0.0
+#    environment:
+#      ES_JAVA_OPTS: "-Xms500m -Xmx500m"
+#    ulimits:
+#      memlock:
+#        soft: -1
+#        hard: -1
+
+#  kibana:
+#    image: wodby/kibana:6.1-2.0.0
+##    image: wodby/kibana:6.0-2.0.0
+##    image: wodby/kibana:5.6-2.0.0
+##    image: wodby/kibana:5.5-2.0.0
+##    image: wodby/kibana:5.4-2.0.0
+#    depends_on:
+#      - elasticsearch
+#    labels:
+#      - 'traefik.backend=kibana'
+#      - 'traefik.port=5601'
+#      - 'traefik.frontend.rule=Host:kibana.php.docker.localhost'
+
   mailhog:
     image: mailhog/mailhog
     labels:
