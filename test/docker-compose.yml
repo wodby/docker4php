@@ -2,23 +2,27 @@ version: "2"
 
 services:
   mariadb:
-    image: $MARIADB102
+    image: wodby/mariadb:$MARIADB_TAG
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: php
-      MYSQL_USER: php
-      MYSQL_PASSWORD: php
+      MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
+      MYSQL_DATABASE: $DB_NAME
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASSWORD
 
   php:
-    image: $PHP71
+    image: wodby/php:$PHP_VER-$PHP_STABILITY_TAG
     environment:
       PHP_SENDMAIL_PATH: '/bin/true'
+      DB_HOST: $DB_HOST
+      DB_USER: $DB_USER
+      DB_NAME: $DB_NAME
+      DB_PASSWORD: $DB_PASSWORD
     volumes:
       - codebase:/var/www/html
-      - ./test.sh:/var/www/html/test.sh
+      - ./tests:/usr/local/bin/tests
 
   nginx:
-    image: $NGINX113
+    image: wodby/php-nginx:$NGINX_TAG
     environment:
       NGINX_STATIC_CONTENT_OPEN_FILE_CACHE: "off"
       NGINX_ERROR_LOG_LEVEL: debug

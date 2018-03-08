@@ -1,10 +1,8 @@
--include env_make
+include docker.mk
 
 .PHONY: test
 
 PHP_VER ?= 7.2
 
-default: test
-
 test:
-	cd ./test/$(PHP_VER) && ./run.sh
+	cd ./test && PHP_VER=$(PHP_VER) ./run

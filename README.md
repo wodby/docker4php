@@ -42,7 +42,7 @@ The PHP stack consist of the following containers:
 | Apache        | 2.4                | `apache`        | [wodby/php-apache]                 |                    |
 | PHP           | 7.x, 5.6           | `php`           | [wodby/php]                        |                    |
 | MariaDB       | 10.2, 10.1         | `mariadb`       | [wodby/mariadb]                    | ✓                  |
-| PostgreSQL    | 10.1, 9.6          | `postgres`      | [wodby/postgres]                   |                    |
+| PostgreSQL    | 10.1, 9.x          | `postgres`      | [wodby/postgres]                   |                    |
 | Redis         | 4.0, 3.2           | `redis`         | [wodby/redis]                      |                    |
 | Varnish       | 4.1                | `varnish`       | [wodby/varnish]                    |                    |
 | Solr          | 7.x, 6.x, 5.5, 5.4 | `solr`          | [wodby/solr]                       |                    |

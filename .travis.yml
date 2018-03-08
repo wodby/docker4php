@@ -8,9 +8,13 @@ env:
     - PHP_VER=7.2
     - PHP_VER=7.1
     - PHP_VER=7.0
+    - PHP_VER=5.6
 
 script:
+  - set -e
   - make test
+  - cp docker.mk Makefile
+  - tar -czf docker4php.tar.gz docker-compose.yml docker-sync.yml Makefile .env traefik.yml
 
 deploy:
   provider: releases
@@ -19,13 +23,6 @@ deploy:
   skip_cleanup: true
   file_glob: true
   file:
-    - docker-compose.yml
-    - docker-sync.yml
-    - traefik.yml
+    - docker4php.tar.gz
   on:
     tags: true
-
-notifications:
-  slack:
-    on_failure: never
-    secure: "kVQgQQTWMoXRqMH+gvZlAiG6I/Sg00wN1VRUAGs64s8teQKRH78DqipVVq31Dqb1ISUTTacat6xeNPX6whI5HE6Zc3dl07+5jjJu9dtxph2OaQxGxty4TWcv+2uBtEwSGVrMbtuiBRAh2RBPvgnDDnomgQbEPSgNrt2G9b/dODTlYaV0jy4k0fg8V1C2q8e6vgQsZNm278byIuEJQF8cWldlqLI72U9bzVBPUkmcU3jWHK7EP2hyMfcTyuGg2jOrZY3/D79YgMXDjp5zVjMRGpsmj4wRh/KMg777NVNffIXDSspDWyme04FwTg41bLBU2ypJRlVvJIGV0q9vCTAxj6lMML9n2TQ2LVi6sBWmWN5u1CPYnecboNVjZL6+WHMVYrs+3jGKPMA9DATJaEyVVDHRiPjlDo5H7vdGM5SmFI0QqIDw3Ig6zuGdKcr6btM1pgPp7xjfYZw2FAvRbttosaesd1EJFYyZcvvlFrT+dZyaIzOZugpnKMEjVt8BouYTkkGi90CgzXOvWjiCwW2VmLQTuhfT7sKd5dMPmEJarUBNSfCrmPtndfQhVogpIMUBgVQgKEFxFJV7FuekR76QxG4iXEDdGjkp6aBhVutcWBzxeE8slYUYRIzxrvUrHUdYBv4EckVtqta/I258M7LDvg6ZLWF7U8DUSULPrTW02ic="
