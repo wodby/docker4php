@@ -12,6 +12,7 @@ services:
   php:
     image: wodby/php:$PHP_VER-$PHP_STABILITY_TAG
     environment:
+      DEBUG: 1
       PHP_SENDMAIL_PATH: '/bin/true'
       DB_HOST: $DB_HOST
       DB_USER: $DB_USER
