@@ -17,4 +17,7 @@ sed -i "s/^DB_PASSWORD=.*/DB_PASSWORD=${DB_PASSWORD}/" .env
 php artisan migrate --seed
 php artisan vendor:publish
 
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
+
 curl -s nginx | grep -q "Laravel 5"

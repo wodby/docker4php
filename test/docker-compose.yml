@@ -10,7 +10,7 @@ services:
       MYSQL_PASSWORD: $DB_PASSWORD
 
   php:
-    image: wodby/php:$PHP_VER-$PHP_STABILITY_TAG
+    image: wodby/php:$PHP_VER-dev-$PHP_STABILITY_TAG
     environment:
       DEBUG: 1
       PHP_SENDMAIL_PATH: '/bin/true'
