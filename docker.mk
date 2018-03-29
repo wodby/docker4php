@@ -1,6 +1,6 @@
 include .env
 
-.PHONY: up down stop prune ps shell
+.PHONY: up down stop prune ps shell logs
 
 default: up
 
@@ -24,3 +24,10 @@ ps:
 
 shell:
 	docker exec -ti $(shell docker ps --filter name='$(PROJECT_NAME)_php' --format "{{ .ID }}") sh
+
+logs:
+	@docker-compose logs -f $(filter-out $@,$(MAKECMDGOALS))
+
+# https://stackoverflow.com/a/6273809/1826109
+%:
+	@:
