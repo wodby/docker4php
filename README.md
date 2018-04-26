@@ -18,6 +18,7 @@ Read [**Quick Start**](https://wodby.com/stacks/php/docs/local/quick-start).
 [wodby/mariadb]: https://github.com/wodby/mariadb
 [wodby/postgres]: https://github.com/wodby/postgres
 [wodby/redis]: https://github.com/wodby/redis
+[wodby/node]: https://github.com/wodby/node
 [wodby/varnish]: https://github.com/wodby/varnish
 [wodby/solr]: https://github.com/wodby/solr
 [wodby/elasticsearch]: https://github.com/wodby/elasticsearch
@@ -31,7 +32,6 @@ Read [**Quick Start**](https://wodby.com/stacks/php/docs/local/quick-start).
 [wodby/adminer]: https://hub.docker.com/r/wodby/adminer
 [phpmyadmin/phpmyadmin]: https://hub.docker.com/r/phpmyadmin/phpmyadmin
 [portainer/portainer]: https://hub.docker.com/portainer/portainer
-[_/node]: https://hub.docker.com/_/node
 [_/traefik]: https://hub.docker.com/_/traefik
 
 The PHP stack consist of the following containers:
@@ -44,10 +44,11 @@ The PHP stack consist of the following containers:
 | MariaDB       | 10.2, 10.1         | `mariadb`       | [wodby/mariadb]                    | ✓                  |
 | PostgreSQL    | 10.1, 9.x          | `postgres`      | [wodby/postgres]                   |                    |
 | Redis         | 4.0, 3.2           | `redis`         | [wodby/redis]                      |                    |
+| Node          | 9, 8               | `node`          | [wodby/node]                       |                    |
 | Varnish       | 4.1                | `varnish`       | [wodby/varnish]                    |                    |
 | Solr          | 7.x, 6.x, 5.5, 5.4 | `solr`          | [wodby/solr]                       |                    |
-| Elasticsearch | 6.x, 5.5, 5.4      | `elasticsearch` | [wodby/elasticsearch]              |                    |
-| Kibana        | 6.x, 5.5, 5.4      | `kibana`        | [wodby/kibana]                     |                    |
+| Elasticsearch | 6.x, 5.6, 5.5, 5.4 | `elasticsearch` | [wodby/elasticsearch]              |                    |
+| Kibana        | 6.x, 5.6, 5.5, 5.4 | `kibana`        | [wodby/kibana]                     |                    |
 | Memcached     | 1.4                | `memcached`     | [wodby/memcached]                  |                    |
 | Webgrind      | 1.5                | `webgrind`      | [wodby/webgrind]                   |                    |
 | Blackfire     | latest             | `blackfire`     | [blackfire/blackfire]              |                    |
@@ -56,7 +57,6 @@ The PHP stack consist of the following containers:
 | Mailhog       | latest             | `mailhog`       | [mailhog/mailhog]                  | ✓                  |
 | Adminer       | 4.3                | `adminer`       | [wodby/adminer]                    |                    |
 | phpMyAdmin    | latest             | `pma`           | [phpmyadmin/phpmyadmin]            |                    |
-| Node          | latest             | `node`          | [_/node]                           |                    |
 | Portainer     | latest             | `portainer`     | [portainer/portainer]              | ✓                  |
 | Traefik       | latest             | `traefik`       | [_/traefik]                        | ✓                  |
 
