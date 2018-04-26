@@ -188,7 +188,7 @@ services:
 #      WEAVER_CONVERSION_FALLBACK: "false"
 
 #  node:
-#    image: node:alpine
+#    image: wodby/node:$NODE_TAG
 #    container_name: "${PROJECT_NAME}_node"
 #    working_dir: /app
 #    labels:
