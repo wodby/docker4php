@@ -20,7 +20,7 @@ services:
       DB_PASSWORD: $DB_PASSWORD
     volumes:
       - codebase:/var/www/html
-      - ./tests:/usr/local/bin/tests
+      - ./tests.sh:/usr/local/bin/tests.sh
 
   nginx:
     image: wodby/php-nginx:$NGINX_TAG

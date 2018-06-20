@@ -8,5 +8,5 @@ fi
 
 docker-compose up -d
 docker-compose exec mariadb make check-ready -f /usr/local/bin/actions.mk max_try=12 wait_seconds=5
-docker-compose exec php tests
+docker-compose exec php tests.sh
 docker-compose down
