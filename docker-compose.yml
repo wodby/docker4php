@@ -220,6 +220,7 @@ services:
 #      - files:/mnt/files
 
 #  opensmtpd:
+#    container_name: "${PROJECT_NAME}_opensmtpd"
 #    image: wodby/opensmtpd:$OPENSMTPD_TAG
 
   portainer:
