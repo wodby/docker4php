@@ -42,14 +42,14 @@ The PHP stack consist of the following containers:
 | Apache        | 2.4                | `apache`        | [wodby/php-apache]                 |                    |
 | PHP           | 7.x, 5.6           | `php`           | [wodby/php]                        |                    |
 | MariaDB       | 10.3, 10.2, 10.1   | `mariadb`       | [wodby/mariadb]                    | ✓                  |
-| PostgreSQL    | 10.1, 9.x          | `postgres`      | [wodby/postgres]                   |                    |
+| PostgreSQL    | 10, 9.x            | `postgres`      | [wodby/postgres]                   |                    |
 | Redis         | 4.0, 3.2           | `redis`         | [wodby/redis]                      |                    |
 | Node          | 9, 8               | `node`          | [wodby/node]                       |                    |
 | Varnish       | 4.1                | `varnish`       | [wodby/varnish]                    |                    |
 | Solr          | 7.x, 6.x, 5.5, 5.4 | `solr`          | [wodby/solr]                       |                    |
 | Elasticsearch | 6.x, 5.6, 5.5, 5.4 | `elasticsearch` | [wodby/elasticsearch]              |                    |
 | Kibana        | 6.x, 5.6, 5.5, 5.4 | `kibana`        | [wodby/kibana]                     |                    |
-| Memcached     | 1.4                | `memcached`     | [wodby/memcached]                  |                    |
+| Memcached     | 1.5                | `memcached`     | [wodby/memcached]                  |                    |
 | Webgrind      | 1.5                | `webgrind`      | [wodby/webgrind]                   |                    |
 | Blackfire     | latest             | `blackfire`     | [blackfire/blackfire]              |                    |
 | Rsyslog       | latest             | `rsyslog`       | [wodby/rsyslog]                    |                    |
