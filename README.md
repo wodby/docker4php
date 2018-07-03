@@ -12,6 +12,58 @@ Read [**Quick Start**](https://wodby.com/stacks/php/docs/local/quick-start).
 
 ## Stack
 
+The PHP stack consist of the following containers:
+
+| Container     | Versions           | Service name    | Image                              | Default |
+| ------------- | ------------------ | --------------- | ---------------------------------- | ------- |
+| [Nginx]       | 1.15, 1.14, 1.13   | `nginx`         | [wodby/php-nginx]                  | ✓       |
+| [Apache]      | 2.4                | `apache`        | [wodby/php-apache]                 |         |
+| [PHP]         | 7.x, 5.6           | `php`           | [wodby/php]                        |         |
+| [MariaDB]     | 10.3, 10.2, 10.1   | `mariadb`       | [wodby/mariadb]                    | ✓       |
+| [PostgreSQL]  | 10, 9.x            | `postgres`      | [wodby/postgres]                   |         |
+| [Redis]       | 4.0, 3.2           | `redis`         | [wodby/redis]                      |         |
+| [Node.js]     | 9.11, 8.11, 6.14   | `node`          | [wodby/node]                       |         |
+| [Varnish]     | 4.1                | `varnish`       | [wodby/varnish]                    |         |
+| [Solr]        | 7.x, 6.x, 5.5, 5.4 | `solr`          | [wodby/solr]                       |         |
+| Elasticsearch | 6.x, 5.6, 5.5, 5.4 | `elasticsearch` | [wodby/elasticsearch]              |         |
+| Kibana        | 6.x, 5.6, 5.5, 5.4 | `kibana`        | [wodby/kibana]                     |         |
+| [Memcached]   | 1.5                | `memcached`     | [wodby/memcached]                  |         |
+| [Webgrind]    | 1.5                | `webgrind`      | [wodby/webgrind]                   |         |
+| [Blackfire]   | latest             | `blackfire`     | [blackfire/blackfire]              |         |
+| [Rsyslog]     | latest             | `rsyslog`       | [wodby/rsyslog]                    |         |
+| [AthenaPDF]   | 2.10.0             | `athenapdf`     | [arachnysdocker/athenapdf-service] |         |
+| [Mailhog]     | latest             | `mailhog`       | [mailhog/mailhog]                  | ✓       |
+| [OpenSMTPD]   | 6.0                | `opensmtpd`     | [wodby/opensmtpd]                  |         |
+| Adminer       | 4.3                | `adminer`       | [wodby/adminer]                    |         |
+| phpMyAdmin    | latest             | `pma`           | [phpmyadmin/phpmyadmin]            |         |
+| Portainer     | latest             | `portainer`     | [portainer/portainer]              | ✓       |
+| Traefik       | latest             | `traefik`       | [_/traefik]                        | ✓       |
+
+## Documentation
+
+Full documentation is available at https://wodby.com/stacks/php/docs/local
+
+## License
+
+This project is licensed under the MIT open source license.
+
+[Nginx]: https://wodby.com/stacks/php/docs/containers/nginx
+[Apache]: https://wodby.com/stacks/php/docs/containers/apache
+[PHP]: https://wodby.com/stacks/php/docs/containers/php/
+[MariaDB]: https://wodby.com/stacks/php/docs/containers/mariadb
+[PostgreSQL]: https://wodby.com/stacks/php/docs/containers/postgres
+[Redis]: https://wodby.com/stacks/php/docs/containers/redis
+[Varnish]: https://wodby.com/stacks/php/docs/containers/varnish
+[Node.js]: https://wodby.com/stacks/php/docs/containers/node
+[Solr]: https://wodby.com/stacks/php/docs/containers/solr/
+[Memcached]: https://wodby.com/stacks/php/docs/containers/memcached/
+[Webgrind]: https://wodby.com/stacks/php/docs/containers/webgrind/
+[Blackfire]: https://wodby.com/stacks/php/docs/containers/blackfire/
+[Rsyslog]: https://wodby.com/stacks/php/docs/containers/rsyslog/
+[AthenaPDF]: https://wodby.com/stacks/php/docs/containers/athenapdf/
+[Mailhog]: https://wodby.com/stacks/php/docs/containers/mailhog/
+[OpenSMTPD]: https://wodby.com/stacks/php/docs/containers/opensmtpd/
+
 [wodby/php-nginx]: https://github.com/wodby/php-nginx
 [wodby/php-apache]: https://github.com/wodby/php-apache
 [wodby/php]: https://github.com/wodby/php
@@ -33,37 +85,3 @@ Read [**Quick Start**](https://wodby.com/stacks/php/docs/local/quick-start).
 [phpmyadmin/phpmyadmin]: https://hub.docker.com/r/phpmyadmin/phpmyadmin
 [portainer/portainer]: https://hub.docker.com/portainer/portainer
 [_/traefik]: https://hub.docker.com/_/traefik
-
-The PHP stack consist of the following containers:
-
-| Container     | Versions           | Service name    | Image                              | Enabled by default |
-| ------------- | ------------------ | --------------- | ---------------------------------- | ------------------ |
-| Nginx         | 1.15, 1.14, 1.13   | `nginx`         | [wodby/php-nginx]                  | ✓                  |
-| Apache        | 2.4                | `apache`        | [wodby/php-apache]                 |                    |
-| PHP           | 7.x, 5.6           | `php`           | [wodby/php]                        |                    |
-| MariaDB       | 10.3, 10.2, 10.1   | `mariadb`       | [wodby/mariadb]                    | ✓                  |
-| PostgreSQL    | 10, 9.x            | `postgres`      | [wodby/postgres]                   |                    |
-| Redis         | 4.0, 3.2           | `redis`         | [wodby/redis]                      |                    |
-| Node          | 9, 8               | `node`          | [wodby/node]                       |                    |
-| Varnish       | 4.1                | `varnish`       | [wodby/varnish]                    |                    |
-| Solr          | 7.x, 6.x, 5.5, 5.4 | `solr`          | [wodby/solr]                       |                    |
-| Elasticsearch | 6.x, 5.6, 5.5, 5.4 | `elasticsearch` | [wodby/elasticsearch]              |                    |
-| Kibana        | 6.x, 5.6, 5.5, 5.4 | `kibana`        | [wodby/kibana]                     |                    |
-| Memcached     | 1.5                | `memcached`     | [wodby/memcached]                  |                    |
-| Webgrind      | 1.5                | `webgrind`      | [wodby/webgrind]                   |                    |
-| Blackfire     | latest             | `blackfire`     | [blackfire/blackfire]              |                    |
-| Rsyslog       | latest             | `rsyslog`       | [wodby/rsyslog]                    |                    |
-| AthenaPDF     | 2.10.0             | `athenapdf`     | [arachnysdocker/athenapdf-service] |                    |
-| Mailhog       | latest             | `mailhog`       | [mailhog/mailhog]                  | ✓                  |
-| Adminer       | 4.3                | `adminer`       | [wodby/adminer]                    |                    |
-| phpMyAdmin    | latest             | `pma`           | [phpmyadmin/phpmyadmin]            |                    |
-| Portainer     | latest             | `portainer`     | [portainer/portainer]              | ✓                  |
-| Traefik       | latest             | `traefik`       | [_/traefik]                        | ✓                  |
-
-## Documentation
-
-Full documentation is available at https://wodby.com/stacks/php/docs/local
-
-## License
-
-This project is licensed under the MIT open source license.
