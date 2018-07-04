@@ -24,7 +24,7 @@ The PHP stack consist of the following containers:
 | [Redis]       | 4.0, 3.2           | `redis`         | [wodby/redis]                      |         |
 | [Node.js]     | 9.11, 8.11, 6.14   | `node`          | [wodby/node]                       |         |
 | [Varnish]     | 4.1                | `varnish`       | [wodby/varnish]                    |         |
-| [Solr]        | 7.x, 6.6, 5.5, 5.4 | `solr`          | [wodby/solr]                       |         |
+| [Solr]        | 7.x, 6.6, 5.5      | `solr`          | [wodby/solr]                       |         |
 | Elasticsearch | 6.x, 5.6, 5.5, 5.4 | `elasticsearch` | [wodby/elasticsearch]              |         |
 | Kibana        | 6.x, 5.6, 5.5, 5.4 | `kibana`        | [wodby/kibana]                     |         |
 | [Memcached]   | 1.5                | `memcached`     | [wodby/memcached]                  |         |
