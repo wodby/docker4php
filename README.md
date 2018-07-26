@@ -43,6 +43,10 @@ The PHP stack consist of the following containers:
 
 Full documentation is available at https://docs.wodby.com/stacks/php/local
 
+## Maintenance
+
+We regularly update images used in this stack and release them together, see [releases page](https://github.com/wodby/docker4php/releases) for full changelog and update instructions.
+
 ## License
 
 This project is licensed under the MIT open source license.
