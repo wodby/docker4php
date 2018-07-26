@@ -1,14 +1,14 @@
 # Docker-based PHP stack
 
 [![Build Status](https://travis-ci.org/wodby/docker4php.svg?branch=master)](https://travis-ci.org/wodby/docker4php)
-[![Wodby Slack](http://slack.wodby.com/badge.svg)](http://slack.wodby.com)
-[![Wodby Twitter](https://img.shields.io/twitter/follow/wodbyhq.svg?style=social&label=Follow)](https://twitter.com/wodbyhq)
 
 ## Introduction
 
 Docker4PHP is a set of docker images optimized for PHP. Use `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4php/releases) to spin up local environment on Linux, Mac OS X and Windows. 
 
-Read the docs on [**how to use**](https://docs.wodby.com/stacks/php/local#usage).
+* Read the docs on [**how to use**](https://docs.wodby.com/stacks/php/local#usage)
+* Follow [us on Twitter](https://twitter.com/wodbyhq) to track future updates
+* Join [community slack](https://slack.wodby.com) to ask questions
 
 ## Stack
 
