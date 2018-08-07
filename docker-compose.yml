@@ -82,7 +82,7 @@ services:
 #      APACHE_LOG_LEVEL: debug
 #      APACHE_BACKEND_HOST: php
 #      APACHE_VHOST_PRESET: php
-#      APACHE_SERVER_ROOT: /var/www/html/public
+#      APACHE_DOCUMENT_ROOT: /var/www/html/public
 #    volumes:
 #      - ./:/var/www/html
 ## For macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
