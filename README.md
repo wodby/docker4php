@@ -7,7 +7,7 @@
 Docker4PHP is a set of docker images optimized for PHP. Use `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4php/releases) to spin up local environment on Linux, Mac OS X and Windows. 
 
 * Read the docs on [**how to use**](https://docs.wodby.com/stacks/php/local#usage)
-* Follow [us on Twitter](https://twitter.com/wodbyhq) to track future updates
+* Follow [@wodbycloud](https://twitter.com/wodbycloud) for updates announcements
 * Join [community slack](https://slack.wodby.com) to ask questions
 
 ## Stack
