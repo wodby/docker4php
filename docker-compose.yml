@@ -110,6 +110,7 @@ services:
 #      VARNISH_SECRET: secret
 #      VARNISH_BACKEND_HOST: nginx
 #      VARNISH_BACKEND_PORT: 80
+#      VARNISH_PURGE_EXTERNAL_REQUEST_HEADER: X-Real-IP
 #    labels:
 #      - 'traefik.backend=varnish'
 #      - 'traefik.port=6081'
