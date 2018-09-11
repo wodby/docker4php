@@ -63,7 +63,7 @@ This project is licensed under the MIT open source license.
 [Node.js]: https://wodby.com/docs/stacks/php/containers#nodejs
 [OpenSMTPD]: https://wodby.com/docs/stacks/php/containers#opensmtpd
 [PHP]: https://wodby.com/docs/stacks/php/containers#php
-[PostgreSQL]: https://wodby.com/docs/stacks/php/containers#postgres
+[PostgreSQL]: https://wodby.com/docs/stacks/php/containers#postgresql
 [Redis]: https://wodby.com/docs/stacks/php/containers#redis
 [Rsyslog]: https://wodby.com/docs/stacks/php/containers#rsyslog
 [Solr]: https://wodby.com/docs/stacks/php/containers#solr
