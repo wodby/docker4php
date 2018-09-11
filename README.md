@@ -52,24 +52,23 @@ We regularly update images used in this stack and release them together, see [re
 This project is licensed under the MIT open source license.
 
 [Apache]: https://wodby.com/docs/stacks/php/containers#apache
-[AthenaPDF]: https://wodby.com/docs/stacks/athenapdf
-[Blackfire]: https://wodby.com/docs/stacks/php/containers#blackfire/
-[Mailhog]: https://wodby.com/docs/stacks/php/containers#mailhog/
-[MariaDB]: https://wodby.com/docs/stacks/mariadb
+[AthenaPDF]: https://wodby.com/docs/stacks/php/containers#athenapdf
+[Blackfire]: https://wodby.com/docs/stacks/php/containers#blackfire
+[Elasticsearch]: https://wodby.com/docs/stacks/php/containers#elasticsearch
+[Kibana]: https://wodby.com/docs/stacks/php/containers#elasticsearch
+[Mailhog]: https://wodby.com/docs/stacks/php/containers#mailhog
+[MariaDB]: https://wodby.com/docs/stacks/php/containers#mariadb
 [Memcached]: https://wodby.com/docs/stacks/php/containers#memcached/
 [Nginx]: https://wodby.com/docs/stacks/php/containers#nginx
 [Node.js]: https://wodby.com/docs/stacks/php/containers#nodejs
-[OpenSMTPD]: https://wodby.com/docs/stacks/opensmtpd
+[OpenSMTPD]: https://wodby.com/docs/stacks/php/containers#opensmtpd
 [PHP]: https://wodby.com/docs/stacks/php/containers#php/
-[PostgreSQL]: https://wodby.com/docs/stacks/postgres
-[Redis]: https://wodby.com/docs/stacks/redis
+[PostgreSQL]: https://wodby.com/docs/stacks/php/containers#postgres
+[Redis]: https://wodby.com/docs/stacks/php/containers#redis
 [Rsyslog]: https://wodby.com/docs/stacks/php/containers#rsyslog/
-[Solr]: https://wodby.com/docs/stacks/solr/
-[Varnish]: https://wodby.com/docs/stacks/varnish
+[Solr]: https://wodby.com/docs/stacks/php/containers#solr
+[Varnish]: https://wodby.com/docs/stacks/php/containers#varnish
 [Webgrind]: https://wodby.com/docs/stacks/php/containers#webgrind/
-
-[Elasticsearch]: https://wodby.com/docs/stacks/elasticsearch/
-[Kibana]: https://wodby.com/docs/stacks/elasticsearch/
 
 [_/traefik]: https://hub.docker.com/_/traefik
 [arachnysdocker/athenapdf-service]: https://hub.docker.com/r/arachnysdocker/athenapdf-service
