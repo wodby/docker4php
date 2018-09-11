@@ -58,17 +58,17 @@ This project is licensed under the MIT open source license.
 [Kibana]: https://wodby.com/docs/stacks/php/containers#elasticsearch
 [Mailhog]: https://wodby.com/docs/stacks/php/containers#mailhog
 [MariaDB]: https://wodby.com/docs/stacks/php/containers#mariadb
-[Memcached]: https://wodby.com/docs/stacks/php/containers#memcached/
+[Memcached]: https://wodby.com/docs/stacks/php/containers#memcached
 [Nginx]: https://wodby.com/docs/stacks/php/containers#nginx
 [Node.js]: https://wodby.com/docs/stacks/php/containers#nodejs
 [OpenSMTPD]: https://wodby.com/docs/stacks/php/containers#opensmtpd
-[PHP]: https://wodby.com/docs/stacks/php/containers#php/
+[PHP]: https://wodby.com/docs/stacks/php/containers#php
 [PostgreSQL]: https://wodby.com/docs/stacks/php/containers#postgres
 [Redis]: https://wodby.com/docs/stacks/php/containers#redis
-[Rsyslog]: https://wodby.com/docs/stacks/php/containers#rsyslog/
+[Rsyslog]: https://wodby.com/docs/stacks/php/containers#rsyslog
 [Solr]: https://wodby.com/docs/stacks/php/containers#solr
 [Varnish]: https://wodby.com/docs/stacks/php/containers#varnish
-[Webgrind]: https://wodby.com/docs/stacks/php/containers#webgrind/
+[Webgrind]: https://wodby.com/docs/stacks/php/containers#webgrind
 
 [_/traefik]: https://hub.docker.com/_/traefik
 [arachnysdocker/athenapdf-service]: https://hub.docker.com/r/arachnysdocker/athenapdf-service
