@@ -211,7 +211,7 @@ services:
 #      BLACKFIRE_SERVER_TOKEN: YYYYY
 
 #  webgrind:
-#    image: wodby/webgrind:1.5-1.0.0
+#    image: wodby/webgrind:$WEBGRIND_TAG
 #    environment:
 #      WEBGRIND_PROFILER_DIR: /mnt/files/xdebug/profiler
 #    labels:
