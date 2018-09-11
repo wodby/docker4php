@@ -54,8 +54,8 @@ This project is licensed under the MIT open source license.
 [Apache]: https://wodby.com/docs/stacks/php/containers#apache
 [AthenaPDF]: https://wodby.com/docs/stacks/php/containers#athenapdf
 [Blackfire]: https://wodby.com/docs/stacks/php/containers#blackfire
-[Elasticsearch]: https://wodby.com/docs/stacks/php/containers#elasticsearch
-[Kibana]: https://wodby.com/docs/stacks/php/containers#elasticsearch
+[Elasticsearch]: https://wodby.com/docs/stacks/elasticsearch
+[Kibana]: https://wodby.com/docs/stacks/elasticsearch
 [Mailhog]: https://wodby.com/docs/stacks/php/containers#mailhog
 [MariaDB]: https://wodby.com/docs/stacks/php/containers#mariadb
 [Memcached]: https://wodby.com/docs/stacks/php/containers#memcached
@@ -66,7 +66,7 @@ This project is licensed under the MIT open source license.
 [PostgreSQL]: https://wodby.com/docs/stacks/php/containers#postgresql
 [Redis]: https://wodby.com/docs/stacks/php/containers#redis
 [Rsyslog]: https://wodby.com/docs/stacks/php/containers#rsyslog
-[Solr]: https://wodby.com/docs/stacks/php/containers#solr
+[Solr]: https://wodby.com/docs/stacks/solr
 [Varnish]: https://wodby.com/docs/stacks/php/containers#varnish
 [Webgrind]: https://wodby.com/docs/stacks/php/containers#webgrind
 
