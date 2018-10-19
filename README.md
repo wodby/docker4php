@@ -21,13 +21,13 @@ The PHP stack consist of the following containers:
 | [PHP]           | 7.2, 7.1, 5.6      | `php`           | [wodby/php]                        |         |
 | [MariaDB]       | 10.3, 10.2, 10.1   | `mariadb`       | [wodby/mariadb]                    | ✓       |
 | [PostgreSQL]    | 10, 9.x            | `postgres`      | [wodby/postgres]                   |         |
-| [Redis]         | 4.0, 3.2           | `redis`         | [wodby/redis]                      |         |
-| [Node.js]       | 10.9, 8.11, 6.14   | `node`          | [wodby/node]                       |         |
+| [Redis]         | 5, 4               | `redis`         | [wodby/redis]                      |         |
+| [Node.js]       | 10, 8, 6           | `node`          | [wodby/node]                       |         |
 | [Varnish]       | 4.1                | `varnish`       | [wodby/varnish]                    |         |
 | [Solr]          | 7.x, 6.6, 5.5      | `solr`          | [wodby/solr]                       |         |
 | [Elasticsearch] | 6.x, 5.6, 5.5, 5.4 | `elasticsearch` | [wodby/elasticsearch]              |         |
 | [Kibana]        | 6.x, 5.6, 5.5, 5.4 | `kibana`        | [wodby/kibana]                     |         |
-| [Memcached]     | 1.5                | `memcached`     | [wodby/memcached]                  |         |
+| [Memcached]     | 1                  | `memcached`     | [wodby/memcached]                  |         |
 | [Webgrind]      | 1.5                | `webgrind`      | [wodby/webgrind]                   |         |
 | [Blackfire]     | latest             | `blackfire`     | [blackfire/blackfire]              |         |
 | [Rsyslog]       | latest             | `rsyslog`       | [wodby/rsyslog]                    |         |
