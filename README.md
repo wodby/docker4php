@@ -48,6 +48,12 @@ Full documentation is available at https://wodby.com/docs/stacks/php/local
 
 We regularly update images used in this stack and release them together, see [releases page](https://github.com/wodby/docker4php/releases) for full changelog and update instructions.
 
+## Other Docker4x projects
+
+* [docker4drupal](https://github.com/wodby/docker4drupal)
+* [docker4wordpress](https://github.com/wodby/docker4wordpress)
+* [docker4ruby](https://github.com/wodby/docker4ruby)
+
 ## License
 
 This project is licensed under the MIT open source license.
