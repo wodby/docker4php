@@ -50,7 +50,7 @@ Images tags format is `[VERSION]-[STABILITY_TAG]` where:
 
 `[VERSION]` is usually a version (without patch version) of an application running in a container, e.g. `wodby/nginx:1.15-x.x.x` where Nginx version is `1.15` and `x.x.x` is a stability tag. For some images we include both major and minor version like PHP `7.2`, for others we include only major like Redis `5`. 
 
-`[STABILITY_TAG]` is a version of an image (not application) that corresponds to a git tag of the image repository, e.g. `wodby/mariadb:10.2-3.3.9` has MariaDB `10.2` and stability tag [`3.3.8`](https://github.com/wodby/mariadb/releases/tag/3.3.8). New stability tags include patch updates for applications and an image fixes/improvements (new env vars, orchestration actions, etc). Changelog for a stability tag can be found in corresponding a git tag description. Stability tags follow [semantic versioning](https://semver.org/).
+`[STABILITY_TAG]` is a version of an image (not application) that corresponds to a git tag of the image repository, e.g. `wodby/mariadb:10.2-3.3.8` has MariaDB `10.2` and stability tag [`3.3.8`](https://github.com/wodby/mariadb/releases/tag/3.3.8). New stability tags include patch updates for applications and an image fixes/improvements (new env vars, orchestration actions, etc). Changelog for a stability tag can be found in corresponding a git tag description. Stability tags follow [semantic versioning](https://semver.org/).
 
 We highly encourage to use images only with stability tags.
 
