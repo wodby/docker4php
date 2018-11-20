@@ -68,7 +68,7 @@ services:
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
     labels:
-      - 'traefik.backend=nginx'
+      - 'traefik.backend=${PROJECT_NAME}_nginx'
       - 'traefik.port=80'
       - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
 
@@ -88,7 +88,7 @@ services:
 ##      - ./:/var/www/html:cached # User-guided caching
 ##      - docker-sync:/var/www/html # Docker-sync
 #    labels:
-#      - 'traefik.backend=apache'
+#      - 'traefik.backend=${PROJECT_NAME}_apache'
 #      - 'traefik.port=80'
 #      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
 
@@ -96,7 +96,7 @@ services:
     image: mailhog/mailhog
     container_name: "${PROJECT_NAME}_mailhog"
     labels:
-      - 'traefik.backend=mailhog'
+      - 'traefik.backend=${PROJECT_NAME}_mailhog'
       - 'traefik.port=8025'
       - 'traefik.frontend.rule=Host:mailhog.${PROJECT_BASE_URL}'
 
@@ -111,7 +111,7 @@ services:
 #      VARNISH_BACKEND_PORT: 80
 #      VARNISH_PURGE_EXTERNAL_REQUEST_HEADER: X-Real-IP
 #    labels:
-#      - 'traefik.backend=varnish'
+#      - 'traefik.backend=${PROJECT_NAME}_varnish'
 #      - 'traefik.port=6081'
 #      - 'traefik.frontend.rule=Host:varnish.${PROJECT_BASE_URL}'
 
@@ -128,7 +128,7 @@ services:
 #      ADMINER_DEFAULT_DB_HOST: $DB_HOST
 #      ADMINER_DEFAULT_DB_NAME: $DB_NAME
 #    labels:
-#      - 'traefik.backend=adminer'
+#      - 'traefik.backend=${PROJECT_NAME}_adminer'
 #      - 'traefik.port=9000'
 #      - 'traefik.frontend.rule=Host:adminer.${PROJECT_BASE_URL}'
 
@@ -142,7 +142,7 @@ services:
 #      PHP_UPLOAD_MAX_FILESIZE: 1G
 #      PHP_MAX_INPUT_VARS: 1G
 #    labels:
-#      - 'traefik.backend=pma'
+#      - 'traefik.backend=${PROJECT_NAME}_pma'
 #      - 'traefik.port=80'
 #      - 'traefik.frontend.rule=Host:pma.${PROJECT_BASE_URL}'
 
@@ -152,7 +152,7 @@ services:
 #    environment:
 #      SOLR_HEAP: 1024m
 #    labels:
-#      - 'traefik.backend=solr'
+#      - 'traefik.backend=${PROJECT_NAME}_solr'
 #      - 'traefik.port=8983'
 #      - 'traefik.frontend.rule=Host:solr.${PROJECT_BASE_URL}'
 
@@ -170,7 +170,7 @@ services:
 #    depends_on:
 #      - elasticsearch
 #    labels:
-#      - 'traefik.backend=kibana'
+#      - 'traefik.backend=${PROJECT_NAME}_kibana'
 #      - 'traefik.port=5601'
 #      - 'traefik.frontend.rule=Host:kibana.php.docker.localhost'
 
@@ -198,7 +198,7 @@ services:
 #    container_name: "${PROJECT_NAME}_node"
 #    working_dir: /app
 #    labels:
-#      - 'traefik.backend=node'
+#      - 'traefik.backend=${PROJECT_NAME}_node'
 #      - 'traefik.port=3000'
 #      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL}'
 #    expose:
@@ -218,7 +218,7 @@ services:
 #    environment:
 #      WEBGRIND_PROFILER_DIR: /mnt/files/xdebug/profiler
 #    labels:
-#      - 'traefik.backend=webgrind'
+#      - 'traefik.backend=${PROJECT_NAME}_webgrind'
 #      - 'traefik.port=8080'
 #      - 'traefik.frontend.rule=Host:webgrind.php.docker.localhost'
 #    volumes:
@@ -234,7 +234,7 @@ services:
 #    volumes:
 #      - files:/mnt/files
 #    labels:
-#      - 'traefik.backend=xhprof'
+#      - 'traefik.backend=${PROJECT_NAME}_xhprof'
 #      - 'traefik.port=8080'
 #      - 'traefik.frontend.rule=Host:xhprof.${PROJECT_BASE_URL}'
 
@@ -245,7 +245,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
-      - 'traefik.backend=portainer'
+      - 'traefik.backend=${PROJECT_NAME}_portainer'
       - 'traefik.port=9000'
       - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
 
