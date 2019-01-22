@@ -18,6 +18,8 @@ services:
       DB_USER: $DB_USER
       DB_NAME: $DB_NAME
       DB_PASSWORD: $DB_PASSWORD
+      PHP_FPM_USER: wodby
+      PHP_FPM_GROUP: wodby
     volumes:
       - codebase:/var/www/html
       - ./tests.sh:/usr/local/bin/tests.sh
