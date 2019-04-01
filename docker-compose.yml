@@ -27,7 +27,8 @@ services:
 #      - /path/to/postgres/data/on/host:/var/lib/postgresql/data # I want to manage volumes manually.
 
   php:
-    image: wodby/php:$PHP_TAG
+    #build: containers/centos-php 
+    image: knesser/centos-php-fpm
     container_name: "${PROJECT_NAME}_php"
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
@@ -37,6 +38,7 @@ services:
       DB_NAME: $DB_NAME
       PHP_FPM_USER: wodby
       PHP_FPM_GROUP: wodby
+      XDEBUG: $XDEBUG
 ## Read instructions at https://wodby.com/stacks/php/docs/local/xdebug/
 #      PHP_XDEBUG: 1
 #      PHP_XDEBUG_DEFAULT_ENABLE: 1
@@ -46,7 +48,8 @@ services:
 #      PHP_XDEBUG_REMOTE_HOST: 10.254.254.254 # macOS
 #      PHP_XDEBUG_REMOTE_HOST: 10.0.75.1 # Windows
     volumes:
-      - ./:/var/www/html
+      - ./jisc-collections-symfony:/var/www/html
+      - ./containers/centos-php/$XDEBUG:/etc/php.d/xdebug.ini
 ## For macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
@@ -65,7 +68,7 @@ services:
       NGINX_VHOST_PRESET: php
       NGINX_SERVER_ROOT: /var/www/html/public
     volumes:
-      - ./:/var/www/html
+      - ./jisc-collections-symfony:/var/www/html
 # Options for macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
