@@ -50,6 +50,7 @@ services:
     volumes:
       - ./jisc-collections-symfony:/var/www/html
       - ./containers/centos-php/$XDEBUG:/etc/php.d/xdebug.ini
+      - ./containers/centos-php/additional-php.ini:/etc/opt/remi/php72/php.d/additional-php.ini
 ## For macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
