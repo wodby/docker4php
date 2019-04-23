@@ -1,20 +1,20 @@
 language: bash
 
 services:
-  - docker
+- docker
 
 env:
   matrix:
-    - PHP_VER=7.3
-    - PHP_VER=7.2
-    - PHP_VER=7.1
-    - PHP_VER=5.6 GITHUB_RELEASE=1
+  - PHP_VER=7.3
+  - PHP_VER=7.2
+  - PHP_VER=7.1
+  - PHP_VER=5.6 GITHUB_RELEASE=1
 
 script:
-  - set -e
-  - make test
-  - cp docker.mk Makefile
-  - tar -czf docker4php.tar.gz docker-compose.yml docker-sync.yml Makefile .env traefik.yml
+- set -e
+- make test
+- cp docker.mk Makefile
+- tar -czf docker4php.tar.gz docker-compose.yml docker-sync.yml Makefile .env traefik.yml
 
 deploy:
   provider: releases
@@ -23,7 +23,14 @@ deploy:
   skip_cleanup: true
   file_glob: true
   file:
-    - docker4php.tar.gz
+  - docker4php.tar.gz
   on:
     tags: true
     condition: $GITHUB_RELEASE = 1
+
+notifications:
+  email:
+    recipients:
+    - travisci@wodby.com
+    on_success: never
+    on_failure: always
