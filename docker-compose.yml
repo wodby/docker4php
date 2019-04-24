@@ -2,7 +2,8 @@ version: "3"
 
 services:
   mariadb:
-    image: wodby/mariadb:$MARIADB_TAG
+#    image: wodby/mariadb:$MARIADB_TAG
+    image: mariadb
     container_name: "${PROJECT_NAME}_mariadb"
     stop_grace_period: 30s
     environment:
@@ -10,6 +11,10 @@ services:
       MYSQL_DATABASE: $DB_NAME
       MYSQL_USER: $DB_USER
       MYSQL_PASSWORD: $DB_PASSWORD
+    user: mysql
+    volumes:
+      - nfsmountmysql:/var/lib/mysql
+
 #    volumes:
 #      - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
 #      - /path/to/mariadb/data/on/host:/var/lib/mysql # I want to manage volumes manually.
@@ -71,7 +76,8 @@ services:
       NGINX_VHOST_PRESET: php
       NGINX_SERVER_ROOT: /var/www/html/public
     volumes:
-      - ./jisc-collections-symfony:/var/www/html
+#      - ./jisc-collections-symfony:/var/www/html
+      - "nfsmount:/var/www/html"
 # Options for macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
@@ -274,12 +280,12 @@ volumes:
       type: nfs
       o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
       device: ":${S4_ROOT}"
-#  nfsmountmysql:
-#    driver: local
-#    driver_opts:
-#      type: nfs
-#      o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
-#      device: ":${MYSQL_SOURCE_DIR}"
+  nfsmountmysql:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
+      device: ":${PWD}/data/mariadb"
 #volumes:
 ## Docker-sync for macOS users
 #  docker-sync:
