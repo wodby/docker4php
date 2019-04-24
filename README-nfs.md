@@ -14,7 +14,7 @@ Import the db dump when you have set up in your new site.
 1.   Copy files/doctrine.yaml to config/packages/dev/doctrine.yaml
 in jisc-collections-symfony
 
-2.   Copy files/doctrine.yaml  config/services_dev.yaml
+2.   Copy files/services_dev.yaml  config/services_dev.yaml
 
 3.   Update .env in docker4php so that you are using S4_ROOT_PARENT
 to point to the directory above the jisc-collections-symfony folder
