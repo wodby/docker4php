@@ -60,7 +60,7 @@ In the container do the folloowing:
 
 Import your db dump
 mysql -uroot -ppassword -hmariadb php < /var/www/html/dump.sql
-mysql -uroot -ppassword  -hmariaddb php < /var/www/html/create_sess.sql
+mysql -uroot -ppassword  -hmariadb php < /var/www/html/create_sess.sql
 
 8.  Visit your site using port 9000 ( diffferent from 8000 so that you can have the old one running
 if you need to ).
