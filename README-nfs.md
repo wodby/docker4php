@@ -2,6 +2,8 @@ To get nfs, memcache and db sessions to work:
 
 Preliminary: 
 
+Clone jisc-collections-symfony into the same directory as this README.
+
 NB site uses localhost rather than php.docker.localhost
 
 Take a db dump of your  current setup  and make it available to your
