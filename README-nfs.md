@@ -25,7 +25,8 @@ If not then modify docker-compose.yml directly.
 
 4. cp files/create_sess.sql to jisc-collections-symfony
 
-5. chown -R 999:999 data/mariadb
+5. sudo chown -R 999:999 data/mariadb
+   sudo chmod -R 777 data/mariadb
 
 6. start the containers
 
