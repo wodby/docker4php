@@ -1,0 +1,75 @@
+parameters:
+    # Adds a fallback DATABASE_URL if the env var is not set.
+    # This allows you to run cache:warmup even if your
+    # environment variables are not available yet.
+    # You should not need to change this value.
+    env(DATABASE_URL): ''
+
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                # configure these for your database server
+                driver: 'pdo_mysql'
+                options:
+                    1002: "SET sql_mode = 'ANSI,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER'"
+                server_version: 'mariadb-10.1.36'
+                charset: utf8mb4
+                default_table_options:
+                    charset: utf8mb4
+                    collate: utf8mb4_unicode_ci
+
+                url: '%env(resolve:DATABASE_URL)%'
+
+            byod:
+                driver: 'pdo_sqlsrv'
+                url: '%env(resolve:BYOD_URL)%'
+    orm:
+        default_entity_manager: default
+        auto_generate_proxy_classes: true
+        #Your guess is as good as mine for some of these:
+        entity_managers:
+            default:
+                naming_strategy: doctrine.orm.naming_strategy.underscore
+                auto_mapping: true
+
+                # each caching driver type defines its own config options
+                metadata_cache_driver:
+                    type: memcache
+                    host: memcached
+                    port: 11211
+                    instance_class: Memcache
+                query_cache_driver:
+                    type: memcache
+                    host: memcached
+                    port: 11211
+                    instance_class: Memcache
+                result_cache_driver:
+                    type: memcache
+                    host: memcached
+                    port: 11211
+                    instance_class: Memcache
+                # the 'service' type requires to define the 'id' option too
+#                query_cache_driver:
+#                    type: service
+#                    id: App\ORM\MyCacheService
+                connection: default
+                mappings:
+                    App:
+                        is_bundle: false
+                        type: annotation
+                        dir: '%kernel.project_dir%/src/Entity'
+                        prefix: 'App\Entity'
+                        alias: App
+            byod:
+                connection: byod
+                mappings:
+                    App: 
+                        is_bundle: false
+                        type: annotation
+                        dir: '%kernel.project_dir%/src/Entity'
+                        prefix: 'App\Entity'
+                        alias: App
+
+
