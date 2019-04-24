@@ -23,7 +23,7 @@ NB you need to have a folder called 'jisc-collections-symfony'
 
 If not then modify docker-compose.yml directly.
 
-4. cp create_sess.sql to jisc-collections-symfony
+4. cp files/create_sess.sql to jisc-collections-symfony
 
 5. chown -R 999:999 data/mariadb
 
