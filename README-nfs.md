@@ -39,8 +39,8 @@ make shell
 In the container run:
 
 Import your db dump
-mysql -uroot -ppassword -hmariab < /var/www/html/dump.sql
-mysql -uroot -ppassword  -hmariadb < /var/www/html/create_sess.sql
+mysql -uroot -ppassword -hmariadb < /var/www/html/dump.sql
+mysql -uroot -ppassword  -hmariaddb < /var/www/html/create_sess.sql
 
 8.  Visit your site using port 9000 ( diffferent from 8000 so that you can have the old one running
 if you need to ).
