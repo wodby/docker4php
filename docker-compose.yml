@@ -113,6 +113,8 @@ services:
       - 'traefik.backend=${PROJECT_NAME}_mailhog'
       - 'traefik.port=8025'
       - 'traefik.frontend.rule=Host:mailhog.${PROJECT_BASE_URL}'
+    ports:
+      - "8025:8025"
 
 #  varnish:
 #    image: wodby/varnish:$VARNISH_TAG
