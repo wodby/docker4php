@@ -1,4 +1,5 @@
-FROM miveo/centos-php-fpm:7.2
+FROM wodby/apache:${BASE_IMAGE_TAG}
+# FROM miveo/centos-php-fpm:7.2
 
 
 RUN  curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo

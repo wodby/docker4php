@@ -2,8 +2,8 @@ version: "3"
 
 services:
   mariadb:
-#    image: wodby/mariadb:$MARIADB_TAG
-    image: mariadb
+    image: wodby/mariadb:$MARIADB_TAG
+#    image: mariadb
     container_name: "${PROJECT_NAME}_mariadb"
     stop_grace_period: 30s
     ports:
@@ -66,47 +66,48 @@ services:
 ## For XHProf and Xdebug profiler traces
 #      - files:/mnt/files
 
-  nginx:
-    image: wodby/nginx:$NGINX_TAG
-    container_name: "${PROJECT_NAME}_nginx"
-    depends_on:
-      - php
-    environment:
-      NGINX_STATIC_OPEN_FILE_CACHE: "off"
-      NGINX_ERROR_LOG_LEVEL: debug
-      NGINX_BACKEND_HOST: php
-      NGINX_VHOST_PRESET: php
-      NGINX_SERVER_ROOT: /var/www/html/public
-    volumes:
-#      - ./jisc-collections-symfony:/var/www/html
-      - "nfsmount:/var/www/html"
-# Options for macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
-#      - ./:/var/www/html:cached # User-guided caching
-#      - docker-sync:/var/www/html # Docker-sync
-    labels:
-      - 'traefik.backend=${PROJECT_NAME}_nginx'
-      - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
-
-#  apache:
-#    image: wodby/apache:$APACHE_TAG
-#    container_name: "${PROJECT_NAME}_apache"
+#  nginx:
+#    image: wodby/nginx:$NGINX_TAG
+#    container_name: "${PROJECT_NAME}_nginx"
 #    depends_on:
 #      - php
 #    environment:
-#      APACHE_LOG_LEVEL: debug
-#      APACHE_BACKEND_HOST: php
-#      APACHE_VHOST_PRESET: php
-#      APACHE_DOCUMENT_ROOT: /var/www/html/public
+#      NGINX_STATIC_OPEN_FILE_CACHE: "off"
+#      NGINX_ERROR_LOG_LEVEL: debug
+#      NGINX_BACKEND_HOST: php
+#      NGINX_VHOST_PRESET: php
+#      NGINX_SERVER_ROOT: /var/www/html/public
 #    volumes:
-#      - ./:/var/www/html
-## For macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
-##      - ./:/var/www/html:cached # User-guided caching
-##      - docker-sync:/var/www/html # Docker-sync
+#      - ./jisc-collections-symfony:/var/www/html
+#      - "nfsmount:/var/www/html"
+# Options for macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
+#      - ./:/var/www/html:cached # User-guided caching
+#      - docker-sync:/var/www/html # Docker-sync
 #    labels:
-#      - 'traefik.backend=${PROJECT_NAME}_apache'
+#      - 'traefik.backend=${PROJECT_NAME}_nginx'
 #      - 'traefik.port=80'
 #      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
+
+  apache:
+    image: wodby/apache:$APACHE_TAG
+    container_name: "${PROJECT_NAME}_apache"
+    depends_on:
+      - php
+    environment:
+      APACHE_LOG_LEVEL: debug
+      APACHE_BACKEND_HOST: php
+      APACHE_VHOST_PRESET: php
+      APACHE_DOCUMENT_ROOT: /var/www/html/public
+    volumes:
+      - ./jisc-collections-symfony:/var/www/html
+      - "nfsmount:/var/www/html"
+# For macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
+##      - ./:/var/www/html:cached # User-guided caching
+##      - docker-sync:/var/www/html # Docker-sync
+    labels:
+      - 'traefik.backend=${PROJECT_NAME}_apache'
+      - 'traefik.port=80'
+      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
 
   mailhog:
     image: mailhog/mailhog
