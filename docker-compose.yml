@@ -48,7 +48,7 @@ services:
 #      PHP_XDEBUG_REMOTE_HOST: 10.0.75.1 # Windows
     volumes:
       - ./:/var/www/html
-## For macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
+## For macOS users (https://wodby.com/docs/stacks/php/local#docker-for-mac)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
 ## For XHProf and Xdebug profiler traces
@@ -67,7 +67,7 @@ services:
       NGINX_SERVER_ROOT: /var/www/html/public
     volumes:
       - ./:/var/www/html
-# Options for macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
+# Options for macOS users (https://wodby.com/docs/stacks/php/local#docker-for-mac)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
     labels:
@@ -87,7 +87,7 @@ services:
 #      APACHE_DOCUMENT_ROOT: /var/www/html/public
 #    volumes:
 #      - ./:/var/www/html
-## For macOS users (https://wodby.com/stacks/php/docs/local/docker-for-mac/)
+## For macOS users (https://wodby.com/docs/stacks/php/local#docker-for-mac)
 ##      - ./:/var/www/html:cached # User-guided caching
 ##      - docker-sync:/var/www/html # Docker-sync
 #    labels:
