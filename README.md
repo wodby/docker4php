@@ -33,7 +33,7 @@ The PHP stack consist of the following containers:
 | [AthenaPDF]     | 2.10.0                  | `athenapdf`     | [arachnysdocker/athenapdf-service] |         |
 | [Rsyslog]       | latest                  | `rsyslog`       | [wodby/rsyslog]                    |         |
 | [Blackfire]     | latest                  | `blackfire`     | [blackfire/blackfire]              |         |
-| [Webgrind]      | 1.5                     | `webgrind`      | [wodby/webgrind]                   |         |
+| [Webgrind]      | 1                       | `webgrind`      | [wodby/webgrind]                   |         |
 | [Xhprof viewer] | latest                  | `xhprof`        | [wodby/xhprof]                     |         |
 | Adminer         | 4.6                     | `adminer`       | [wodby/adminer]                    |         |
 | phpMyAdmin      | latest                  | `pma`           | [phpmyadmin/phpmyadmin]            |         |
