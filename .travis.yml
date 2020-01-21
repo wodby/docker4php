@@ -7,9 +7,7 @@ env:
   matrix:
   - PHP_VER=7.4
   - PHP_VER=7.3
-  - PHP_VER=7.2
-  - PHP_VER=7.1
-  - PHP_VER=5.6 GITHUB_RELEASE=1
+  - PHP_VER=7.2 GITHUB_RELEASE=1
 
 script:
 - set -e

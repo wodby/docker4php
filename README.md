@@ -18,7 +18,7 @@ The PHP stack consist of the following containers:
 | -------------   | ------------------      | --------------- | ---------------------------------- | ------- |
 | [Nginx]         | 1.17, 1.16              | `nginx`         | [wodby/nginx]                      | ✓       |
 | [Apache]        | 2.4                     | `apache`        | [wodby/apache]                     |         |
-| [PHP]           | 7.4, 7.3, 7.2, 7.1, 5.6 | `php`           | [wodby/php]                        |         |
+| [PHP]           | 7.4, 7.3, 7.2           | `php`           | [wodby/php]                        |         |
 | [MariaDB]       | 10.4, 10.3, 10.2, 10.1  | `mariadb`       | [wodby/mariadb]                    | ✓       |
 | [PostgreSQL]    | 12, 11, 10, 9.x         | `postgres`      | [wodby/postgres]                   |         |
 | [Redis]         | 5, 4                    | `redis`         | [wodby/redis]                      |         |
@@ -39,8 +39,6 @@ The PHP stack consist of the following containers:
 | phpMyAdmin      | latest                  | `pma`           | [phpmyadmin/phpmyadmin]            |         |
 | Portainer       | latest                  | `portainer`     | [portainer/portainer]              | ✓       |
 | Traefik         | latest                  | `traefik`       | [_/traefik]                        | ✓       |
-
-❗️PHP 7.1 and 5.6 [have reached end of life](http://php.net/supported-versions.php) and no longer supported by PHP team. We strongly advise you to migrate to the latest stable PHP version.   
 
 ## Documentation
 
