@@ -16,9 +16,10 @@ The PHP stack consist of the following containers:
 
 | Container       | Versions                | Service name    | Image                              | Default |
 | -------------   | ------------------      | --------------- | ---------------------------------- | ------- |
-| [Nginx]         | 1.17, 1.16              | `nginx`         | [wodby/nginx]                      | ✓       |
+| [Nginx]         | 1.19, 1.18              | `nginx`         | [wodby/nginx]                      | ✓       |
 | [Apache]        | 2.4                     | `apache`        | [wodby/apache]                     |         |
-| [PHP]           | 7.4, 7.3, 7.2           | `php`           | [wodby/php]                        |         |
+| [PHP]           | 7.4, 7.3, 7.2           | `php`           | [wodby/php]                        | ✓       |
+| Crond           |                         | `crond`         | [wodby/php]                        |         |
 | [MariaDB]       | 10.4, 10.3, 10.2, 10.1  | `mariadb`       | [wodby/mariadb]                    | ✓       |
 | [PostgreSQL]    | 12, 11, 10, 9.x         | `postgres`      | [wodby/postgres]                   |         |
 | [Redis]         | 6, 5                    | `redis`         | [wodby/redis]                      |         |
