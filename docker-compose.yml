@@ -151,6 +151,7 @@ services:
 #    environment:
 #      SOLR_HEAP: 1024m
 #    labels:
+#    - "traefik.http.services.${PROJECT_NAME}_solr.loadbalancer.server.port=8983"
 #    - "traefik.http.routers.${PROJECT_NAME}_solr.rule=Host(`solr.${PROJECT_BASE_URL}`)"
 
 #  elasticsearch:
