@@ -40,8 +40,9 @@ ps:
 	@docker ps --filter name='$(PROJECT_NAME)*'
 
 ## shell	:	Access `php` container via shell.
+##		You can optionally pass an argument with a service name to open a shell on the specified container
 shell:
-	docker exec -ti -e COLUMNS=$(shell tput cols) -e LINES=$(shell tput lines) $(shell docker ps --filter name='$(PROJECT_NAME)_php' --format "{{ .ID }}") sh
+	docker exec -ti -e COLUMNS=$(shell tput cols) -e LINES=$(shell tput lines) $(shell docker ps --filter name='$(PROJECT_NAME)_$(or $(filter-out $@,$(MAKECMDGOALS)), 'php')' --format "{{ .ID }}") sh
 
 ## logs	:	View containers logs.
 ##		You can optinally pass an argument with the service name to limit logs
