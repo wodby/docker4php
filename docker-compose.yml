@@ -48,10 +48,10 @@ services:
     #      PHP_XDEBUG_REMOTE_HOST: 10.0.75.1 # Windows
     volumes:
     - ./:/var/www/html:cached
-  #    # Alternative for macOS users: docker-sync https://wodby.com/docs/stacks/drupal/local#docker-for-mac
-  #    - docker-sync:/var/www/html
-  #    # For XHProf and Xdebug profiler traces
-  #    - files:/mnt/files
+## Alternative for macOS users: Mutagen https://wodby.com/docs/stacks/php/local#docker-for-mac
+#    - mutagen:/var/www/html
+## For XHProf and Xdebug profiler traces
+#    - files:/mnt/files
 
   nginx:
     image: wodby/nginx:$NGINX_TAG
@@ -66,27 +66,27 @@ services:
       NGINX_SERVER_ROOT: /var/www/html/public
     volumes:
     - ./:/var/www/html:cached
-    #    # Alternative for macOS users: docker-sync https://wodby.com/docs/stacks/drupal/local#docker-for-mac
-    #    - docker-sync:/var/www/html
+## Alternative for macOS users: Mutagen https://wodby.com/docs/stacks/php/local#docker-for-mac
+#    - mutagen:/var/www/html
     labels:
     - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${PROJECT_BASE_URL}`)"
 
-  apache:
-    image: wodby/apache:$APACHE_TAG
-    container_name: "${PROJECT_NAME}_apache"
-    depends_on:
-    - php
-    environment:
-      APACHE_LOG_LEVEL: debug
-      APACHE_BACKEND_HOST: php
-      APACHE_VHOST_PRESET: php
-      APACHE_DOCUMENT_ROOT: /var/www/html/public
-    volumes:
-    - ./:/var/www/html:cached
-    #    # Alternative for macOS users: docker-sync https://wodby.com/docs/stacks/drupal/local#docker-for-mac
-    #    - docker-sync:/var/www/html
-    labels:
-    - "traefik.http.routers.${PROJECT_NAME}_apache.rule=Host(`${PROJECT_BASE_URL}`)"
+#  apache:
+#    image: wodby/apache:$APACHE_TAG
+#    container_name: "${PROJECT_NAME}_apache"
+#    depends_on:
+#    - php
+#    environment:
+#      APACHE_LOG_LEVEL: debug
+#      APACHE_BACKEND_HOST: php
+#      APACHE_VHOST_PRESET: php
+#      APACHE_DOCUMENT_ROOT: /var/www/html/public
+#    volumes:
+#    - ./:/var/www/html:cached
+### Alternative for macOS users: Mutagen https://wodby.com/docs/stacks/php/local#docker-for-mac
+##    - mutagen:/var/www/html
+#    labels:
+#    - "traefik.http.routers.${PROJECT_NAME}_apache.rule=Host(`${PROJECT_BASE_URL}`)"
 
   mailhog:
     image: mailhog/mailhog
@@ -250,8 +250,7 @@ services:
     - /var/run/docker.sock:/var/run/docker.sock
 
 #volumes:
-## Docker-sync for macOS users
-#  docker-sync:
-#    external: true
+## Mutagen for macOS users
+#  mutagen:
 ## For Xdebug profiler
 #  files:
