@@ -249,6 +249,15 @@ services:
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
 
+#  mutagen:
+#    build:
+#      context: .
+#      dockerfile: mutagen/Dockerfile
+#    init: true
+#    container_name: "mutagen"
+#    volumes:
+#    - mutagen:/var/www/html
+
 #volumes:
 ## Mutagen for macOS users
 #  mutagen:
