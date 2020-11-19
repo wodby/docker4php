@@ -1,6 +1,6 @@
 # Docker-based PHP stack
 
-[![Build Status](https://travis-ci.org/wodby/docker4php.svg?branch=master)](https://travis-ci.org/wodby/docker4php)
+[![Build Status](https://github.com/wodby/docker4php/workflows/Run%20tests/badge.svg)](https://github.com/wodby/docker4php/actions)
 
 ## Introduction
 
