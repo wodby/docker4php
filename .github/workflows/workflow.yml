@@ -29,13 +29,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: prepare artifact
-      run: cp docker.mk Makefile && tar -czf docker4ruby.tar.gz docker-compose.yml mutagen Makefile .env traefik.yml
+      run: cp docker.mk Makefile && tar -czf docker4php.tar.gz docker-compose.yml mutagen Makefile .env traefik.yml
     - uses: xresloader/upload-to-github-release@v1
       id: upload_artifact
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: docker4ruby.tar.gz
+        file: docker4php.tar.gz
         overwrite: true
         tags: true
         draft: true
