@@ -14,33 +14,32 @@ Docker4PHP is a set of docker images optimized for PHP. Use `docker-compose.yml`
 
 The PHP stack consist of the following containers:
 
-| Container       | Versions                | Service name    | Image                              | Default |
-| -------------   | ------------------      | --------------- | ---------------------------------- | ------- |
-| [Nginx]         | 1.19, 1.18              | `nginx`         | [wodby/nginx]                      | ✓       |
-| [Apache]        | 2.4                     | `apache`        | [wodby/apache]                     |         |
-| [PHP]           | 8.0, 7.4, 7.3           | `php`           | [wodby/php]                        | ✓       |
-| Crond           |                         | `crond`         | [wodby/php]                        |         |
-| [MariaDB]       | 10.5, 10.4, 10.3, 10.2  | `mariadb`       | [wodby/mariadb]                    | ✓       |
-| [PostgreSQL]    | 13, 12, 11, 10, 9.6     | `postgres`      | [wodby/postgres]                   |         |
-| [Redis]         | 6, 5                    | `redis`         | [wodby/redis]                      |         |
-| [Memcached]     | 1                       | `memcached`     | [wodby/memcached]                  |         |
-| [Node.js]       | 14, 12, 10              | `node`          | [wodby/node]                       |         |
-| [Varnish]       | 6.0, 4.1                | `varnish`       | [wodby/varnish]                    |         |
-| [Solr]          | 8, 7, 6, 5              | `solr`          | [wodby/solr]                       |         |
-| [Elasticsearch] | 7, 6                    | `elasticsearch` | [wodby/elasticsearch]              |         |
-| [Kibana]        | 7, 6                    | `kibana`        | [wodby/kibana]                     |         |
-| [OpenSMTPD]     | 6.0                     | `opensmtpd`     | [wodby/opensmtpd]                  |         |
-| [Mailhog]       | latest                  | `mailhog`       | [mailhog/mailhog]                  | ✓       |
-| [AthenaPDF]     | 2.16.0                  | `athenapdf`     | [arachnysdocker/athenapdf-service] |         |
-| [Rsyslog]       | latest                  | `rsyslog`       | [wodby/rsyslog]                    |         |
-| [Blackfire]     | latest                  | `blackfire`     | [blackfire/blackfire]              |         |
-| [Webgrind]      | 1                       | `webgrind`      | [wodby/webgrind]                   |         |
-| [Xhprof viewer] | latest                  | `xhprof`        | [wodby/xhprof]                     |         |
-| Adminer         | 4.6                     | `adminer`       | [wodby/adminer]                    |         |
-| phpMyAdmin      | latest                  | `pma`           | [phpmyadmin/phpmyadmin]            |         |
-| Portainer       | latest                  | `portainer`     | [portainer/portainer]              | ✓       |
-| Traefik         | latest                  | `traefik`       | [_/traefik]                        | ✓       |
-
+| Container       | Versions                | Image                              | ARM64 support | Enabled by default |
+| -------------   | ------------------      | ---------------------------------- | ------------- | ------- |
+| [Nginx]         | 1.19, 1.18              | [wodby/nginx]                      | ✓             | ✓       |
+| [Apache]        | 2.4                     | [wodby/apache]                     | ✓             |         |
+| [PHP]           | 8.0, 7.4, 7.3           | [wodby/php]                        | ✓             | ✓       |
+| Crond           |                         | [wodby/php]                        | ✓             |         |
+| [MariaDB]       | 10.5, 10.4, 10.3, 10.2  | [wodby/mariadb]                    | ✓             | ✓       |
+| [PostgreSQL]    | 13, 12, 11, 10, 9.6     | [wodby/postgres]                   | ✓             |         |
+| [Redis]         | 6, 5                    | [wodby/redis]                      | ✓             |         |
+| [Memcached]     | 1                       | [wodby/memcached]                  |               |         |
+| [Node.js]       | 14, 12, 10              | [wodby/node]                       |               |         |
+| [Varnish]       | 6.0, 4.1                | [wodby/varnish]                    |               |         |
+| [Solr]          | 8, 7, 6, 5              | [wodby/solr]                       |               |         |
+| [Elasticsearch] | 7, 6                    | [wodby/elasticsearch]              |               |         |
+| [Kibana]        | 7, 6                    | [wodby/kibana]                     |               |         |
+| [OpenSMTPD]     | 6.0                     | [wodby/opensmtpd]                  |               |         |
+| [Mailhog]       | latest                  | [mailhog/mailhog]                  |               | ✓       |
+| [AthenaPDF]     | 2.16.0                  | [arachnysdocker/athenapdf-service] |               |         |
+| [Rsyslog]       | latest                  | [wodby/rsyslog]                    |               |         |
+| [Blackfire]     | latest                  | [blackfire/blackfire]              |               |         |
+| [Webgrind]      | 1                       | [wodby/webgrind]                   |               |         |
+| [Xhprof viewer] | latest                  | [wodby/xhprof]                     |               |         |
+| Adminer         | 4.6                     | [wodby/adminer]                    |               |         |
+| phpMyAdmin      | latest                  | [phpmyadmin/phpmyadmin]            |               |         |
+| Traefik         | latest                  | [_/traefik]                        | ✓             | ✓       |
+                                                                                                 
 ## Documentation
 
 Full documentation is available at https://wodby.com/docs/stacks/php/local
@@ -95,7 +94,6 @@ This project is licensed under the MIT open source license.
 [blackfire/blackfire]: https://hub.docker.com/r/blackfire/blackfire
 [mailhog/mailhog]: https://hub.docker.com/r/mailhog/mailhog
 [phpmyadmin/phpmyadmin]: https://hub.docker.com/r/phpmyadmin/phpmyadmin
-[portainer/portainer]: https://hub.docker.com/portainer/portainer
 [wodby/adminer]: https://hub.docker.com/r/wodby/adminer
 [wodby/apache]: https://github.com/wodby/apache
 [wodby/elasticsearch]: https://github.com/wodby/elasticsearch
