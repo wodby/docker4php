@@ -69,7 +69,11 @@ services:
 #    - mutagen:/var/www/html
     labels:
     - "traefik.enable=true"
-    - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${PROJECT_BASE_URL}`)"
+    - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${PROJECT_BASE_URL}`,`www.${PROJECT_BASE_URL}`)"
+    - "traefik.http.routers.${PROJECT_NAME}_nginx.middlewares=${PROJECT_NAME}_nginx_redirect"
+    - "traefik.http.middlewares.${PROJECT_NAME}_nginx_redirect.redirectregex.regex=^http://${PROJECT_BASE_URL}/(.*)$$"
+    - "traefik.http.middlewares.${PROJECT_NAME}_nginx_redirect.redirectregex.replacement=http://www.${PROJECT_BASE_URL}/$${1}"
+    - "traefik.http.middlewares.${PROJECT_NAME}_nginx_redirect.redirectregex.permanent=true"
 
 #  apache:
 #    image: wodby/apache:$APACHE_TAG
