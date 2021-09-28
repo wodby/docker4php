@@ -6,7 +6,7 @@ if [[ -n "${DEBUG}" ]]; then
     set -x
 fi
 
-composer create-project laravel/laravel laravel
+composer create-project laravel/laravel:^7 laravel
 cd laravel
 composer install
 php artisan key:generate
