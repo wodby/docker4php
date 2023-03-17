@@ -208,12 +208,6 @@ services:
 #    - ./path/to/your/single-page-app:/app
 #    command: sh -c 'npm install && npm run start'
 
-#  blackfire:
-#    image: blackfire/blackfire
-#    environment:
-#      BLACKFIRE_SERVER_ID: XXXXX
-#      BLACKFIRE_SERVER_TOKEN: YYYYY
-
 #  webgrind:
 #    image: wodby/webgrind:$WEBGRIND_TAG
 #    environment:
