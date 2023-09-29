@@ -7,6 +7,7 @@
 Docker4PHP is a set of docker images optimized for PHP. Use `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4php/releases) to spin up local environment on Linux, Mac OS X and Windows. 
 
 * Read the docs on [**how to use**](https://wodby.com/docs/stacks/php/local#usage)
+* Ask questions on [Discord](http://discord.wodby.com/)
 * Ask questions on [Slack](http://slack.wodby.com/)
 * Follow [@wodbycloud](https://twitter.com/wodbycloud) for updates announcements
 
@@ -25,7 +26,7 @@ The PHP stack consist of the following containers:
 | [Redis]         | 7, 6, 5            | [wodby/redis]                      | ✓             |                    |
 | [Memcached]     | 1                  | [wodby/memcached]                  |               |                    |
 | [Node.js]       | 18, 16, 14         | [wodby/node]                       |               |                    |
-| [Varnish]       | 6.0, 4.1           | [wodby/varnish]                    |               |                    |
+| [Varnish]       | 6.0                | [wodby/varnish]                    |               |                    |
 | [Solr]          | 8, 7, 6, 5         | [wodby/solr]                       |               |                    |
 | [Elasticsearch] | 7, 6               | [wodby/elasticsearch]              |               |                    |
 | [Kibana]        | 7, 6               | [wodby/kibana]                     |               |                    |
