@@ -17,7 +17,7 @@ The PHP stack consist of the following containers:
 
 | Container       | Versions                    | Image                              | ARM64 support | Enabled by default |
 |-----------------|-----------------------------|------------------------------------|---------------|--------------------|
-| [Nginx]         | 1.26, 1.25                  | [wodby/nginx]                      | ✓             | ✓                  |
+| [Nginx]         | 1.27, 1.26                  | [wodby/nginx]                      | ✓             | ✓                  |
 | [Apache]        | 2.4                         | [wodby/apache]                     | ✓             |                    |
 | [PHP]           | 8.3, 8.2, 8.1               | [wodby/php]                        | ✓             | ✓                  |
 | Crond           |                             | [wodby/php]                        | ✓             |                    |
