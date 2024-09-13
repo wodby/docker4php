@@ -15,30 +15,30 @@ Docker4PHP is a set of docker images optimized for PHP. Use `compose.yml` file f
 
 The PHP stack consist of the following containers:
 
-| Container       | Versions                    | Image                   | ARM64 support | Enabled by default |
-|-----------------|-----------------------------|-------------------------|---------------|--------------------|
-| [Nginx]         | 1.27, 1.26                  | [wodby/nginx]           | ✓             | ✓                  |
-| [Apache]        | 2.4                         | [wodby/apache]          | ✓             |                    |
-| [PHP]           | 8.3, 8.2, 8.1               | [wodby/php]             | ✓             | ✓                  |
-| Crond           |                             | [wodby/php]             | ✓             |                    |
-| [MariaDB]       | 11, 10.11, 10.6, 10.5, 10.4 | [wodby/mariadb]         | ✓             | ✓                  |
-| [PostgreSQL]    | 16, 15, 14, 13, 12          | [wodby/postgres]        | ✓             |                    |
-| [Valkey]        | 7                           | [wodby/valkey]          | ✓             |                    |
-| [Memcached]     | 1                           | [wodby/memcached]       |               |                    |
-| [Node.js]       | 20, 18                      | [wodby/node]            | ✓             |                    |
-| [Varnish]       | 6.0                         | [wodby/varnish]         | ✓             |                    |
-| [Solr]          | 8                           | [wodby/solr]            | ✓             |                    |
-| [Elasticsearch] | 7                           | [wodby/elasticsearch]   |               |                    |
-| [Kibana]        | 7                           | [wodby/kibana]          |               |                    |
-| [OpenSMTPD]     | 7                           | [wodby/opensmtpd]       | ✓             |                    |
-| Mailpit         | latest                      | [axllent/mailpit]       | ✓             | ✓                  |
-| Gotenberg       | latest                      | [gotenberg/gotenberg]   | ✓             |                    |
-| [Rsyslog]       | latest                      | [wodby/rsyslog]         |               |                    |
-| [Webgrind]      | 1                           | [wodby/webgrind]        | ✓             |                    |
-| [Xhprof viewer] | latest                      | [wodby/xhprof]          | ✓             |                    |
-| Adminer         | 4.6                         | [wodby/adminer]         | ✓             |                    |
-| phpMyAdmin      | latest                      | [phpmyadmin/phpmyadmin] |               |                    |
-| Traefik         | latest                      | [_/traefik]             | ✓             | ✓                  |
+| Container       | Versions                | Image                   | ARM64 support | Enabled by default |
+|-----------------|-------------------------|-------------------------|---------------|--------------------|
+| [Nginx]         | 1.27, 1.26              | [wodby/nginx]           | ✓             | ✓                  |
+| [Apache]        | 2.4                     | [wodby/apache]          | ✓             |                    |
+| [PHP]           | 8.3, 8.2, 8.1           | [wodby/php]             | ✓             | ✓                  |
+| Crond           |                         | [wodby/php]             | ✓             |                    |
+| [MariaDB]       | 11.4, 10.11, 10.6, 10.5 | [wodby/mariadb]         | ✓             | ✓                  |
+| [PostgreSQL]    | 16, 15, 14, 13, 12      | [wodby/postgres]        | ✓             |                    |
+| [Valkey]        | 7                       | [wodby/valkey]          | ✓             |                    |
+| [Memcached]     | 1                       | [wodby/memcached]       |               |                    |
+| [Node.js]       | 20, 18                  | [wodby/node]            | ✓             |                    |
+| [Varnish]       | 6.0                     | [wodby/varnish]         | ✓             |                    |
+| [Solr]          | 8                       | [wodby/solr]            | ✓             |                    |
+| [Elasticsearch] | 7                       | [wodby/elasticsearch]   |               |                    |
+| [Kibana]        | 7                       | [wodby/kibana]          |               |                    |
+| [OpenSMTPD]     | 7                       | [wodby/opensmtpd]       | ✓             |                    |
+| Mailpit         | latest                  | [axllent/mailpit]       | ✓             | ✓                  |
+| Gotenberg       | latest                  | [gotenberg/gotenberg]   | ✓             |                    |
+| [Rsyslog]       | latest                  | [wodby/rsyslog]         |               |                    |
+| [Webgrind]      | 1                       | [wodby/webgrind]        | ✓             |                    |
+| [Xhprof viewer] | latest                  | [wodby/xhprof]          | ✓             |                    |
+| Adminer         | 4.6                     | [wodby/adminer]         | ✓             |                    |
+| phpMyAdmin      | latest                  | [phpmyadmin/phpmyadmin] |               |                    |
+| Traefik         | latest                  | [_/traefik]             | ✓             | ✓                  |
                                                                                                  
 ## Documentation
 
