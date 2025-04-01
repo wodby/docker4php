@@ -37,7 +37,7 @@ The PHP stack consist of the following containers:
 | [Rsyslog]             | latest                  | [wodby/rsyslog]                           | ✓             |                    |
 | [Webgrind]            | 1                       | [wodby/webgrind]                          | ✓             |                    |
 | [Xhprof viewer]       | latest                  | [wodby/xhprof]                            | ✓             |                    |
-| Adminer               | 4.6                     | [wodby/adminer]                           | ✓             |                    |
+| Adminer               | 5                       | [wodby/adminer]                           | ✓             |                    |
 | phpMyAdmin            | latest                  | [phpmyadmin/phpmyadmin]                   |               |                    |
 | Traefik               | latest                  | [_/traefik]                               | ✓             | ✓                  |
 
