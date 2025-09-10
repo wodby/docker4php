@@ -26,7 +26,7 @@ The PHP stack consist of the following containers:
 | [PostgreSQL]          | 17, 16, 15, 14, 13      | [wodby/postgres]                          | ✓             |                    |
 | [Valkey]              | 8, 7                    | [wodby/valkey]                            | ✓             |                    |
 | [Memcached]           | 1                       | [wodby/memcached]                         | ✓             |                    |
-| [Node.js]             | 22, 20, 18              | [wodby/node]                              | ✓             |                    |
+| [Node.js]             | 24, 22, 20              | [wodby/node]                              | ✓             |                    |
 | [Varnish]             | 6.0                     | [wodby/varnish]                           | ✓             |                    |
 | [Solr]                | 9                       | [wodby/solr]                              | ✓             |                    |
 | OpenSearch            | 2                       | [opensearchproject/opensearch]            | ✓             |                    |
