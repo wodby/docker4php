@@ -28,7 +28,7 @@ The PHP stack consists of the following containers:
 | [Redis]               | 8.4, 8.2, 8.0, 7.4      | [wodby/redis]                             | ✓             |                    |
 | [Memcached]           | 1                       | [wodby/memcached]                         | ✓             |                    |
 | [Node.js]             | 24, 22, 20              | [wodby/node]                              | ✓             |                    |
-| [Varnish]             | 6.0                     | [wodby/varnish]                           | ✓             |                    |
+| Vinyl ([Varnish])     | 6.0                     | [wodby/vinyl]                             | ✓             |                    |
 | [Solr]                | 9                       | [wodby/solr]                              | ✓             |                    |
 | OpenSearch            | 2                       | [opensearchproject/opensearch]            | ✓             |                    |
 | OpenSearch Dashboards | 2                       | [opensearchproject/opensearch-dashboards] | ✓             |                    |
@@ -141,6 +141,8 @@ This project is licensed under the MIT open source license.
 [wodby/redis]: https://github.com/wodby/redis
 
 [wodby/varnish]: https://github.com/wodby/varnish
+
+[wodby/vinyl]: https://github.com/wodby/vinyl
 
 [wodby/webgrind]: https://hub.docker.com/r/wodby/webgrind
 
