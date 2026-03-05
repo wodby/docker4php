@@ -28,7 +28,7 @@ The PHP stack consists of the following containers:
 | [Redis]               | 8.4, 8.2, 8.0, 7.4      | [wodby/redis]                             | ✓             |                    |
 | [Memcached]           | 1                       | [wodby/memcached]                         | ✓             |                    |
 | [Node.js]             | 24, 22, 20              | [wodby/node]                              | ✓             |                    |
-| Vinyl ([Varnish])     | 6.0                     | [wodby/vinyl]                             | ✓             |                    |
+| Vinyl ([Varnish])     | 8.0, 6.0                | [wodby/vinyl]                             | ✓             |                    |
 | [Solr]                | 9                       | [wodby/solr]                              | ✓             |                    |
 | OpenSearch            | 2                       | [opensearchproject/opensearch]            | ✓             |                    |
 | OpenSearch Dashboards | 2                       | [opensearchproject/opensearch-dashboards] | ✓             |                    |
