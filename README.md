@@ -7,7 +7,7 @@
 Docker4PHP is a set of docker images optimized for PHP. Use
 `compose.yml` file from the [latest stable release](https://github.com/wodby/docker4php/releases) to spin up local environment on Linux, Mac OS X and Windows.
 
-* Read the docs on [**how to use**](https://wodby.com/docs/stacks/php/local#usage)
+* Read the docs on [**how to use**](https://wodby.com/docs/1.0/stacks/php/local#usage)
 * Ask questions on [Discord](http://discord.wodby.com/)
 * Ask questions on [Slack](http://slack.wodby.com/)
 * Follow [@wodbycloud](https://twitter.com/wodbycloud) for updates announcements
@@ -16,35 +16,35 @@ Docker4PHP is a set of docker images optimized for PHP. Use
 
 The PHP stack consists of the following containers:
 
-| Container             | Versions                | Image                                     | ARM64 support | Enabled by default |
-|-----------------------|-------------------------|-------------------------------------------|---------------|--------------------|
-| [Nginx]               | 1.31, 1.30              | [wodby/nginx]                             | ✓             | ✓                  |
-| [Apache]              | 2.4                     | [wodby/apache]                            | ✓             |                    |
-| [PHP]                 | 8.5, 8.4, 8.3, 8.2      | [wodby/php]                               | ✓             | ✓                  |
-| Crond                 |                         | [wodby/php]                               | ✓             |                    |
-| [MariaDB]             | 11.8, 11.4, 10.11, 10.6 | [wodby/mariadb]                           | ✓             | ✓                  |
-| [PostgreSQL]          | 18, 17, 16, 15, 14      | [wodby/postgres]                          | ✓             |                    |
-| [Valkey]              | 9.0, 8.1, 8.0, 7        | [wodby/valkey]                            | ✓             |                    |
-| [Redis]               | 8.6, 8.4, 8.2, 7.4      | [wodby/redis]                             | ✓             |                    |
-| [Memcached]           | 1                       | [wodby/memcached]                         | ✓             |                    |
-| [Node.js]             | 26, 24, 22              | [wodby/node]                              | ✓             |                    |
-| Vinyl ([Varnish])     | 8.0, 6.0                | [wodby/vinyl]                             | ✓             |                    |
-| [Solr]                | 10, 9                   | [wodby/solr]                              | ✓             |                    |
-| OpenSearch            | 2                       | [opensearchproject/opensearch]            | ✓             |                    |
-| OpenSearch Dashboards | 2                       | [opensearchproject/opensearch-dashboards] | ✓             |                    |
-| [OpenSMTPD]           | 7                       | [wodby/opensmtpd]                         | ✓             |                    |
-| Mailpit               | latest                  | [axllent/mailpit]                         | ✓             | ✓                  |
-| Gotenberg             | latest                  | [gotenberg/gotenberg]                     | ✓             |                    |
-| [Rsyslog]             | latest                  | [wodby/rsyslog]                           | ✓             |                    |
-| [Webgrind]            | 1                       | [wodby/webgrind]                          | ✓             |                    |
-| [Xhprof viewer]       | latest                  | [wodby/xhprof]                            | ✓             |                    |
-| Adminer               | 6                       | [wodby/adminer]                           | ✓             |                    |
-| phpMyAdmin            | latest                  | [phpmyadmin/phpmyadmin]                   |               |                    |
-| Traefik               | 3                       | [_/traefik]                               | ✓             | ✓                  |
+| Container             | Versions                | Image                                     | Enabled by default |
+|-----------------------|-------------------------|-------------------------------------------|--------------------|
+| [Nginx]               | 1.31, 1.30              | [wodby/nginx]                             | ✓                  |
+| [Apache]              | 2.4                     | [wodby/apache]                            |                    |
+| [PHP]                 | 8.5, 8.4, 8.3, 8.2      | [wodby/php]                               | ✓                  |
+| Crond                 |                         | [wodby/php]                               |                    |
+| [MariaDB]             | 11.8, 11.4, 10.11, 10.6 | [wodby/mariadb]                           | ✓                  |
+| [PostgreSQL]          | 18, 17, 16, 15, 14      | [wodby/postgres]                          |                    |
+| [Valkey]              | 9.0, 8.1, 8.0, 7        | [wodby/valkey]                            |                    |
+| [Redis]               | 8.6, 8.4, 8.2, 7.4      | [wodby/redis]                             |                    |
+| [Memcached]           | 1                       | [wodby/memcached]                         |                    |
+| [Node.js]             | 26, 24, 22              | [wodby/node]                              |                    |
+| Vinyl ([Varnish])     | 8.0, 6.0                | [wodby/vinyl]                             |                    |
+| [Solr]                | 10, 9                   | [wodby/solr]                              |                    |
+| OpenSearch            | 2                       | [opensearchproject/opensearch]            |                    |
+| OpenSearch Dashboards | 2                       | [opensearchproject/opensearch-dashboards] |                    |
+| [OpenSMTPD]           | 7                       | [wodby/opensmtpd]                         |                    |
+| Mailpit               | latest                  | [axllent/mailpit]                         | ✓                  |
+| Gotenberg             | latest                  | [gotenberg/gotenberg]                     |                    |
+| [Rsyslog]             | latest                  | [wodby/rsyslog]                           |                    |
+| [Webgrind]            | 1                       | [wodby/webgrind]                          |                    |
+| [Xhprof viewer]       | latest                  | [wodby/xhprof]                            |                    |
+| Adminer               | 6                       | [wodby/adminer]                           |                    |
+| phpMyAdmin            | latest                  | [phpmyadmin/phpmyadmin]                   |                    |
+| Traefik               | 3                       | [_/traefik]                               | ✓                  |
 
 ## Documentation
 
-Full documentation is available at https://wodby.com/docs/stacks/php/local
+Full documentation is available at https://wodby.com/docs/1.0/stacks/php/local
 
 ## Image tags
 
@@ -65,9 +65,6 @@ uses semantic product versions, and third-party images follow their own tag form
 See the [image revision policy](https://github.com/wodby/images#image-revisions)
 for details.
 
-Test fixtures use `*_IMAGE_REVISION` environment variables for the image release
-suffix.
-
 ## Maintenance
 
 We regularly update images used in this stack and release them together, see [releases page](https://github.com/wodby/docker4php/releases) for full changelog and update instructions. Most of routine updates for images and this project performed by [the bot](https://github.com/wodbot) via scripts located at [wodby/images](https://github.com/wodby/images).
@@ -83,35 +80,35 @@ We regularly update images used in this stack and release them together, see [re
 
 This project is licensed under the MIT open source license.
 
-[Apache]: https://wodby.com/docs/stacks/php/containers#apache
+[Apache]: https://wodby.com/docs/1.0/stacks/php/containers#apache
 
-[MariaDB]: https://wodby.com/docs/stacks/php/containers#mariadb
+[MariaDB]: https://wodby.com/docs/1.0/stacks/php/containers#mariadb
 
-[Memcached]: https://wodby.com/docs/stacks/php/containers#memcached
+[Memcached]: https://wodby.com/docs/1.0/stacks/php/containers#memcached
 
-[Nginx]: https://wodby.com/docs/stacks/php/containers#nginx
+[Nginx]: https://wodby.com/docs/1.0/stacks/php/containers#nginx
 
-[Node.js]: https://wodby.com/docs/stacks/php/containers#nodejs
+[Node.js]: https://wodby.com/docs/1.0/stacks/php/containers#nodejs
 
-[OpenSMTPD]: https://wodby.com/docs/stacks/php/containers#opensmtpd
+[OpenSMTPD]: https://wodby.com/docs/1.0/stacks/php/containers#opensmtpd
 
-[PHP]: https://wodby.com/docs/stacks/php/containers#php
+[PHP]: https://wodby.com/docs/1.0/stacks/php/containers#php
 
-[PostgreSQL]: https://wodby.com/docs/stacks/php/containers#postgresql
+[PostgreSQL]: https://wodby.com/docs/1.0/stacks/php/containers#postgresql
 
-[Valkey]: https://wodby.com/docs/stacks/php/containers#valkey
+[Valkey]: https://wodby.com/docs/1.0/stacks/php/containers#valkey
 
-[Redis]: https://wodby.com/docs/stacks/php/containers#redis
+[Redis]: https://wodby.com/docs/1.0/stacks/php/containers#redis
 
-[Rsyslog]: https://wodby.com/docs/stacks/php/containers#rsyslog
+[Rsyslog]: https://wodby.com/docs/1.0/stacks/php/containers#rsyslog
 
-[Solr]: https://wodby.com/docs/stacks/solr
+[Solr]: https://wodby.com/docs/1.0/stacks/solr
 
-[Varnish]: https://wodby.com/docs/stacks/php/containers#varnish
+[Varnish]: https://wodby.com/docs/1.0/stacks/php/containers#varnish
 
-[Webgrind]: https://wodby.com/docs/stacks/php/containers#webgrind
+[Webgrind]: https://wodby.com/docs/1.0/stacks/php/containers#webgrind
 
-[XHProf viewer]: https://wodby.com/docs/stacks/php/containers#xhprof-viewer
+[XHProf viewer]: https://wodby.com/docs/1.0/stacks/php/containers#xhprof-viewer
 
 [_/traefik]: https://hub.docker.com/_/traefik
 
