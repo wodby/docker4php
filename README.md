@@ -8,6 +8,7 @@ Docker4PHP is a set of docker images optimized for PHP. Use
 `compose.yml` file from the [latest stable release](https://github.com/wodby/docker4php/releases) to spin up local environment on Linux, Mac OS X and Windows.
 
 * Read the docs on [**how to use**](https://wodby.com/docs/1.0/stacks/php/local#usage)
+* Deploy to production with the [PHP stack on Wodby](https://wodby.com/deploy-php)
 * Ask questions on [Discord](http://discord.wodby.com/)
 * Ask questions on [Slack](http://slack.wodby.com/)
 * Follow [@wodbycloud](https://twitter.com/wodbycloud) for updates announcements
@@ -68,6 +69,20 @@ for details.
 ## Maintenance
 
 We regularly update images used in this stack and release them together, see [releases page](https://github.com/wodby/docker4php/releases) for full changelog and update instructions. Most of routine updates for images and this project performed by [the bot](https://github.com/wodbot) via scripts located at [wodby/images](https://github.com/wodby/images).
+
+## Deploy to production
+
+Docker4PHP is for local development with Docker Compose. To run the same stack in production, use the [PHP stack on Wodby](https://wodby.com/deploy-php).
+
+It runs your PHP application on Kubernetes with the same `wodby/php` image you use locally, behind Nginx, with MariaDB, PostgreSQL, and Valkey as optional services. You choose where it runs: Wodby Cloud, a Kubernetes cluster in your own cloud account, or a single server of your own.
+
+* Start from the Composer boilerplate, or connect your own repository
+* Database and mail settings reach PHP through the services you link
+* Memory limit, execution time, and PHP-FPM process settings are variables on the PHP service
+* CI/CD is built in
+* A free plan is available, including on a server of your own
+
+Read the [PHP stack guide](https://wodby.com/docs/2.0/stacks/catalog/php/), or see [PHP hosting on Wodby](https://wodby.com/php-hosting) and [pricing](https://wodby.com/pricing).
 
 ## Other Docker4x projects
 
